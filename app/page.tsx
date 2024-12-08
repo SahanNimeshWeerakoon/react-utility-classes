@@ -3,12 +3,20 @@ import styles from "./page.module.css";
 import Carousel from "@/components/Carousel/Carousel";
 
 export default function Home() {
-  const imageArr = [1, 2, 3, 4];
+  const imageArr = [1, 2];
   return (
     <div className={styles.page}>
       <Carousel>
         {imageArr.map((img: number) => (
-          <Image width={100} height={200} src={`/images/${img}.avif`} alt={`${img}`} />
+          <Image
+            key={img}
+            width={0}
+            height={0}
+            sizes="100vw"
+            src={`/images/${img}.avif`}
+            style={{ width: '100%', height: 'auto' }}
+            alt={`${img}`}
+          />
         ))}
       </Carousel>
     </div>

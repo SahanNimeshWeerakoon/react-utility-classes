@@ -1,9 +1,10 @@
 .main {
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 .slidesWrapper {
-    display: flex;
+    width: auto;
 }
 .navigationWrapper {
     position: absolute;
